@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Evolución histórica de la Psicología</title>
+<style>
+:root{--azul:#123b43;--violeta:#e76f51;--beige:#f3f8f6;--blanco:#fff;--texto:#183238;--suave:#587078;--acento:#e9c46a;--panel:#ffffff;--linea:#a8dadc}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 10% 0%,#e1f3ef 0,transparent 28%),var(--beige);color:var(--texto);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.6;transition:background .25s,color .25s}
+header{background:linear-gradient(125deg,#123b43,#1d6265 58%,#e76f51);color:white;padding:58px 20px 48px;text-align:center;position:relative;overflow:hidden}header:after{content:"✦";position:absolute;font-size:15rem;opacity:.08;right:4%;top:-65px;transform:rotate(15deg);pointer-events:none}
+header .eyebrow{letter-spacing:.15em;text-transform:uppercase;font-size:.78rem;color:#ddd6fe}
+h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.1;margin:14px auto;max-width:900px}
+header p{max-width:760px;margin:14px auto 0;color:#ede9fe}
+.autor{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:8px;margin:18px auto 0;padding:10px 18px;width:fit-content;border:1px solid #8dd3c7;border-radius:30px;background:rgba(232,247,243,.14);color:#f0fffb;font-size:14px;text-align:center;position:relative;z-index:1}.autor strong{color:#ffe08a;font-weight:800}
+nav{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid #d8e7e4;display:flex;gap:8px;justify-content:center;flex-wrap:wrap;padding:10px}
+nav a{color:var(--azul);text-decoration:none;font-size:.9rem;font-weight:bold;padding:7px 11px;border-radius:20px}
+nav a:hover{background:#dff3ef;color:#123b43}
+main{max-width:1100px;margin:auto;padding:28px 18px 60px}
+.intro{background:var(--panel);border:1px solid #dcebe7;border-radius:22px;padding:24px 26px;margin:0 auto 30px;box-shadow:0 14px 35px #123b4310}
+.section-title{text-align:center;color:var(--azul);margin:42px 0 24px}
+.section-title h2{font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:5px}
+.timeline{position:relative;display:flex;align-items:stretch;gap:22px;max-width:none;margin:0;padding:34px 10px 24px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:thin;scrollbar-color:var(--violeta) #dbe9e5}
+.timeline:before{content:"";position:absolute;left:0;right:0;top:17px;height:4px;background:linear-gradient(90deg,var(--linea),var(--violeta),var(--acento));border-radius:4px}
+.event{position:relative;flex:0 0 300px;width:300px;padding:0;scroll-snap-align:start}
+.event:nth-child(even){margin-left:0;padding:0}
+.event:before,.event:nth-child(even):before{content:"";position:absolute;left:22px;right:auto;top:-25px;width:16px;height:16px;border:4px solid var(--violeta);background:var(--beige);border-radius:50%;z-index:1}
+.card{background:var(--panel);border:1px solid #dcebe7;border-radius:20px;overflow:hidden;box-shadow:0 12px 30px #123b4310;transition:transform .22s,box-shadow .22s}.card:hover{transform:translateY(-4px);box-shadow:0 18px 35px #123b431c}
+.card-top{padding:20px 21px 14px;background:linear-gradient(135deg,#fafffe,#e7f5f1)}
+.date{display:inline-block;background:#dff3ef;color:#14515a;border-radius:20px;padding:5px 11px;font-size:.8rem;font-weight:bold}
+.card h3{color:var(--azul);margin:12px 0 7px;font-size:1.25rem}
+.card p{margin:8px 0}
+.card-body{padding:0 21px 20px}
+.card-body strong{color:var(--azul)}
+.icon{font-size:1.5rem;margin-right:6px}
+.details{margin-top:12px}
+details{border-top:1px solid #eeeaf5;padding-top:11px;margin-top:11px}
+summary{cursor:pointer;color:#c44e36;font-weight:bold;padding:5px 0}summary:hover{text-decoration:underline}
+.tagline{font-style:italic;color:#14515a;background:#e9f6f2;padding:11px 13px;border-left:3px solid var(--acento);border-radius:10px;margin-top:12px!important}
+.panel{background:var(--panel);border:1px solid #dcebe7;border-radius:22px;padding:24px;margin:24px 0;box-shadow:0 12px 30px #123b430c}
+.panel h2{color:var(--azul);margin-top:0}
+.reflection{max-width:850px;margin:auto}
+.references li{margin-bottom:10px;overflow-wrap:anywhere}
+footer{text-align:center;background:var(--azul);color:white;padding:24px 18px}
+button{border:0;background:var(--violeta);color:white;padding:10px 15px;border-radius:12px;cursor:pointer;font-weight:bold;transition:transform .18s,filter .18s}button:hover{filter:brightness(.95);transform:translateY(-1px)}
+button:hover{background:#5b21b6}
+.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:18px 0}
+.small{color:var(--suave);font-size:.9rem}.toolbar{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:18px auto 24px}.toolbar input{width:min(100%,340px);padding:12px 15px;border:1px solid #c9dfda;border-radius:13px;font:inherit;background:white;color:#183238}.toolbar .secondary{background:#123b43}.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(125px,1fr));gap:12px;margin:15px 0 18px}.person{display:flex;align-items:center;gap:10px;min-width:0;background:#f5faf8;border:1px solid #e0eeea;border-radius:14px;padding:9px}.person img,.portrait-fallback{width:58px;height:66px;flex:0 0 58px;object-fit:cover;object-position:center top;border-radius:10px;background:#d8ebe5}.person span{font-size:.83rem;font-weight:700;line-height:1.25}.portrait-fallback{display:flex;align-items:center;justify-content:center;color:#14515a;font-size:1.35rem;font-weight:bold}.progress-wrap{height:5px;background:#dbe9e5;position:sticky;top:49px;z-index:4}.progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--violeta),var(--acento));transition:width .1s}.theme-dark{--beige:#10262b;--panel:#18373d;--texto:#edf8f5;--suave:#b6cfca;--azul:#dff4ef;--linea:#427c7e;background:#10262b;color:var(--texto)}.theme-dark nav{background:rgba(20,48,54,.95);border-color:#31575c}.theme-dark nav a{color:#e6f4f1}.theme-dark .card-top{background:linear-gradient(135deg,#21464b,#19373d)}.theme-dark .date{background:#31575c;color:#e5f4ef}.theme-dark .tagline,.theme-dark .person{background:#21464b;color:#e8f7f2;border-color:#31575c}.theme-dark .person img,.theme-dark .portrait-fallback{background:#31575c}.theme-dark .toolbar input{background:#18373d;color:#edf8f5;border-color:#42676b}.theme-dark .intro,.theme-dark .panel,.theme-dark .card{border-color:#31575c}
+@media(max-width:700px){
+ .timeline{gap:14px;padding-top:34px}
+ .event{flex-basis:270px;width:270px}
+ nav{position:static}
+ main{padding:20px 12px 42px}
+ .card-top{padding:17px 17px 12px}.card-body{padding:0 17px 17px}
+}
+@media print{
+ body{background:white;font-size:10pt}
+ nav,.actions,button{display:none!important}
+ header{padding:22px;background:#172554!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ main{max-width:none;padding:10px}
+ .timeline:before{background:#c4b5fd!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+ .card,.panel,.intro{box-shadow:none;break-inside:avoid}
+ details{display:block}
+ details>*{display:block}
+ a{color:inherit}
+ footer{background:#172554!important;print-color-adjust:exact;-webkit-print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+<header id="inicio">
+  <div class="eyebrow">Línea de tiempo académica</div>
+  <h1>Evolución histórica de la Psicología</h1>
+  <p>Del pensamiento filosófico a la ciencia contemporánea</p>
+  <div class="autor"><span>Creado por</span> <strong>Camilo Medina</strong> <span>• Proyecto académico de Psicología</span></div>
+</header>
+<nav aria-label="Navegación principal">
+  <a href="#linea">Línea de tiempo</a>
+  <a href="#reflexion">Reflexión final</a>
+  <a href="#referencias">Referencias APA 7</a>
+  <button class="secondary" id="themeToggle" type="button" aria-label="Cambiar tema">🌙 Modo oscuro</button>
+</nav>
+<div class="progress-wrap" aria-hidden="true"><div class="progress-bar" id="progressBar"></div></div>
+<main>
+  <section class="intro">
+    <h2>Introducción</h2>
+    <p>La Psicología evolucionó desde las preguntas filosóficas sobre el alma, la mente y el conocimiento hasta convertirse en una ciencia que estudia la conducta y los procesos mentales mediante diferentes métodos de investigación. Sus corrientes han aportado perspectivas diversas para comprender al ser humano.</p>
+  </section>
+
+  <div class="section-title" id="linea">
+    <h2>Recorrido cronológico</h2>
+    <p class="small">Busca una corriente o un personaje, abre cada etapa y explora sus retratos.</p>
+  </div>
+  <div class="toolbar"><input id="searchBox" type="search" placeholder="Buscar corriente o personaje…" aria-label="Buscar en la línea de tiempo"><button id="expandAll" type="button">＋ Ampliar todas</button><button id="collapseAll" class="secondary" type="button">− Cerrar todas</button></div>
+
+  <section class="timeline" aria-label="Línea de tiempo de la Psicología">
+    <article class="event">
+      <div class="card">
+        <div class="card-top"><span class="date">Antigüedad – siglo XIX</span><h3><span class="icon">🏛️</span>Antecedentes filosóficos</h3></div>
+        <div class="card-body">
+          <p><strong>Representantes:</strong> Sócrates, Platón, Aristóteles, René Descartes y John Locke.</p><div class="people" data-people="Sócrates|Platón|Aristóteles|René Descartes|John Locke"></div>
+          <p><strong>Aportes:</strong> reflexiones sobre el alma, la razón, el conocimiento, la experiencia y la relación entre cuerpo y mente.</p>
+          <p><strong>Importancia:</strong> plantearon preguntas fundamentales que más tarde serían investigadas científicamente.</p>
+          <details><summary>Conocer más</summary><p>Platón reflexionó sobre el alma y el conocimiento; Aristóteles estudió las facultades y la experiencia. Descartes examinó la relación entre mente y cuerpo, mientras Locke destacó el papel de la experiencia en el conocimiento.</p></details>
+          <p class="tagline">Idea clave: comprender al ser humano mediante la reflexión filosófica.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="card">
+        <div class="card-top"><span class="date">1879 – finales del siglo XIX</span><h3><span class="icon">🧪</span>Estructuralismo</h3></div>
+        <div class="card-body">
+          <p><strong>Representantes:</strong> Wilhelm Wundt y Edward Titchener.</p><div class="people" data-people="Wilhelm Wundt|Edward Titchener"></div>
+          <p><strong>Aportes:</strong> Wundt estableció en Leipzig un laboratorio de Psicología experimental en 1879. Titchener desarrolló el estructuralismo y estudió la experiencia consciente mediante la introspección.</p>
+          <p><strong>Importancia:</strong> impulsó el estudio sistemático y experimental de los procesos mentales.</p>
+          <details><summary>Conocer más</summary><p>El laboratorio de Wundt es considerado un hito institucional en el nacimiento de la Psicología científica. Titchener buscó describir los componentes de la experiencia consciente.</p></details>
+          <p class="tagline">Idea clave: estudiar científicamente la experiencia consciente.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="card">
+        <div class="card-top"><span class="date">Finales del siglo XIX – inicios del XX</span><h3><span class="icon">🌱</span>Funcionalismo</h3></div>
+        <div class="card-body">
+          <p><strong>Representante:</strong> William James.</p><div class="people" data-people="William James"></div>
+          <p><strong>Aportes:</strong> estudió las funciones de la conciencia y los procesos mentales, así como su utilidad para la adaptación al entorno.</p>
+          <p><strong>Importancia:</strong> amplió el interés desde la estructura de la mente hacia la función de los procesos psicológicos.</p>
+          <details><summary>Conocer más</summary><p>Influenciado por las ideas evolucionistas, James consideró que la conciencia debía comprenderse también por el papel que desempeña en la vida cotidiana y en la adaptación.</p></details>
+          <p class="tagline">Idea clave: comprender para qué sirven los procesos mentales.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="card">
+        <div class="card-top"><span class="date">Finales del siglo XIX – siglo XX</span><h3><span class="icon">💭</span>Psicoanálisis</h3></div>
+        <div class="card-body">
+          <p><strong>Representante:</strong> Sigmund Freud.</p><div class="people" data-people="Sigmund Freud"></div>
+          <p><strong>Aportes:</strong> destacó el inconsciente, los sueños, los conflictos psíquicos y las experiencias infantiles.</p>
+          <p><strong>Importancia:</strong> introdujo una perspectiva influyente sobre procesos no conscientes y sobre la comprensión clínica de los problemas psicológicos.</p>
+          <details><summary>Conocer más</summary><p>El psicoanálisis tuvo una gran influencia en la psicoterapia y la cultura. Algunas de sus propuestas han sido cuestionadas y revisadas por investigaciones posteriores.</p></details>
+          <p class="tagline">Idea clave: explorar la influencia de procesos inconscientes.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="card">
+        <div class="card-top"><span class="date">Inicios del siglo XX</span><h3><span class="icon">🧩</span>Gestalt</h3></div>
+        <div class="card-body">
+          <p><strong>Representantes:</strong> Max Wertheimer, Wolfgang Köhler y Kurt Koffka.</p><div class="people" data-people="Max Wertheimer|Wolfgang Köhler|Kurt Koffka"></div>
+          <p><strong>Aportes:</strong> estudió la percepción como una totalidad organizada. Entre sus principios están figura-fondo, proximidad, semejanza y cierre.</p>
+          <p><strong>Importancia:</strong> contribuyó a comprender cómo organizamos lo que percibimos y cómo resolvemos problemas.</p>
+          <details><summary>Conocer más</summary><p>La perspectiva Gestalt sostiene que la experiencia no se entiende adecuadamente como una simple suma de elementos aislados, sino considerando las relaciones entre ellos.</p></details>
+          <p class="tagline">Idea clave: el todo organizado es más que la suma de sus partes.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="card">
+        <div class="card-top"><span class="date">Desde 1913 – siglo XX</span><h3><span class="icon">🔎</span>Conductismo</h3></div>
+        <div class="card-body">
+          <p><strong>Representantes:</strong> John B. Watson y B. F. Skinner.</p><div class="people" data-people="John B. Watson|B. F. Skinner"></div>
+          <p><strong>Aportes:</strong> Watson impulsó el estudio de la conducta observable; Skinner investigó el condicionamiento operante, el refuerzo y las consecuencias de la conducta.</p>
+          <p><strong>Importancia:</strong> fortaleció la observación sistemática y la experimentación para estudiar el aprendizaje y el comportamiento.</p>
+          <details><summary>Conocer más</summary><p>El conductismo destacó cómo las condiciones ambientales y las consecuencias de las acciones influyen en la conducta.</p></details>
+          <p class="tagline">Idea clave: estudiar la conducta y las condiciones del aprendizaje.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="card">
+        <div class="card-top"><span class="date">Décadas de 1950 y 1960</span><h3><span class="icon">🌟</span>Psicología humanista</h3></div>
+        <div class="card-body">
+          <p><strong>Representantes:</strong> Abraham Maslow y Carl Rogers.</p><div class="people" data-people="Abraham Maslow|Carl Rogers"></div>
+          <p><strong>Aportes:</strong> Maslow propuso una jerarquía de necesidades y destacó la autorrealización. Rogers desarrolló el enfoque centrado en la persona.</p>
+          <p><strong>Importancia:</strong> dio mayor atención a la experiencia subjetiva, el crecimiento personal y las potencialidades humanas.</p>
+          <details><summary>Conocer más</summary><p>La Psicología humanista resaltó la libertad, la responsabilidad personal y la importancia de una relación de ayuda basada en la aceptación y la empatía.</p></details>
+          <p class="tagline">Idea clave: reconocer las potencialidades y el desarrollo personal.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="card">
+        <div class="card-top"><span class="date">Décadas de 1950 y 1960 en adelante</span><h3><span class="icon">🧠</span>Psicología cognitiva</h3></div>
+        <div class="card-body">
+          <p><strong>Representantes:</strong> Jean Piaget y Ulric Neisser.</p><div class="people" data-people="Jean Piaget|Ulric Neisser"></div>
+          <p><strong>Aportes:</strong> Piaget investigó el desarrollo cognitivo; Neisser contribuyó a consolidar el estudio de procesos como memoria, atención, percepción, lenguaje y pensamiento.</p>
+          <p><strong>Importancia:</strong> devolvió los procesos mentales al centro de la investigación científica.</p>
+          <details><summary>Conocer más</summary><p>La Psicología cognitiva estudia cómo las personas adquieren, organizan, recuerdan y utilizan la información para aprender, razonar y resolver problemas.</p></details>
+          <p class="tagline">Idea clave: estudiar cómo se procesa y utiliza la información.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="event">
+      <div class="card">
+        <div class="card-top"><span class="date">Finales del siglo XX – actualidad</span><h3><span class="icon">🔬</span>Perspectivas contemporáneas</h3></div>
+        <div class="card-body">
+          <p><strong>Perspectivas:</strong> Psicología cognitivo-conductual, neurociencia cognitiva, Psicología positiva, Psicología cultural y enfoques integradores.</p>
+          <p><strong>Aportes:</strong> integración de métodos para estudiar las relaciones entre cerebro, conducta, pensamiento, emociones, cultura y entorno social.</p>
+          <p><strong>Importancia:</strong> promueve una comprensión amplia del ser humano y el uso de investigación e intervenciones evaluadas científicamente.</p>
+          <details><summary>Conocer más</summary><p>Las perspectivas actuales emplean métodos experimentales, análisis estadísticos y técnicas como la neuroimagen, sin que una sola corriente explique por sí misma toda la complejidad humana.</p></details>
+          <p class="tagline">Idea clave: comprender al ser humano desde múltiples perspectivas científicas.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="panel reflection" id="reflexion">
+    <h2>Reflexión final: ¿Cómo ha cambiado la manera de comprender al ser humano?</h2>
+    <p>La manera de comprender al ser humano ha cambiado notablemente a lo largo de la historia. En la Antigüedad, las preguntas sobre el alma, la razón y el conocimiento se abordaban principalmente desde la filosofía. Con el surgimiento de la Psicología científica en el siglo XIX, comenzó a estudiarse la experiencia mediante métodos experimentales. Después, corrientes como el funcionalismo, el psicoanálisis, la Gestalt y el conductismo ofrecieron explicaciones distintas sobre la conciencia, el inconsciente, la percepción y la conducta. La Psicología humanista destacó las potencialidades, la libertad y el crecimiento personal, mientras que la Psicología cognitiva volvió a estudiar de manera sistemática procesos como la memoria, la atención y el pensamiento. Actualmente, las perspectivas contemporáneas integran conocimientos sobre el cerebro, las emociones, el aprendizaje, la cultura y las relaciones sociales. Este recorrido muestra que el ser humano es complejo y no puede comprenderse desde una sola teoría. La evolución de la Psicología ha ampliado sus métodos y preguntas, favoreciendo explicaciones más diversas y una investigación continua sobre la conducta y los procesos mentales.</p>
+  </section>
+
+  <section class="panel references" id="referencias">
+    <h2>Referencias bibliográficas</h2>
+    <ol>
+      <li>Hergenhahn, B. R., &amp; Henley, T. B. (2014). <em>An introduction to the history of psychology</em> (7th ed.). Cengage Learning.</li>
+      <li>Neisser, U. (1967). <em>Cognitive psychology</em>. Appleton-Century-Crofts.</li>
+      <li>Schultz, D. P., &amp; Schultz, S. E. (2015). <em>A history of modern psychology</em> (11th ed.). Cengage Learning.</li>
+    </ol>
+  </section>
+
+  <div class="actions">
+    <button onclick="window.print()">Imprimir / Guardar como PDF</button>
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})">Volver al inicio ↑</button>
+  </div>
+</main>
+<footer>
+  <p>Evolución histórica de la Psicología</p>
+  <p>© 2026 Camilo Medina · Autor de esta línea de tiempo</p>
+</footer>
+
+<script>
+// Busca retratos en Wikimedia Commons. Si no hay conexión o no se encuentra
+// una imagen, conserva un avatar visible con las iniciales para evitar espacios vacíos.
+const peopleQueries = {
+  'Sócrates':'Socrates philosopher bust', 'Platón':'Plato philosopher bust', 'Aristóteles':'Aristotle philosopher portrait',
+  'René Descartes':'René Descartes portrait', 'John Locke':'John Locke philosopher portrait',
+  'Wilhelm Wundt':'Wilhelm Wundt portrait', 'Edward Titchener':'Edward B Titchener portrait',
+  'William James':'William James psychologist portrait', 'Sigmund Freud':'Sigmund Freud portrait',
+  'Max Wertheimer':'Max Wertheimer psychologist portrait', 'Wolfgang Köhler':'Wolfgang Köhler psychologist portrait',
+  'Kurt Koffka':'Kurt Koffka psychologist portrait', 'John B. Watson':'John B Watson psychologist portrait',
+  'B. F. Skinner':'B F Skinner psychologist portrait', 'Abraham Maslow':'Abraham Maslow psychologist portrait',
+  'Carl Rogers':'Carl Rogers psychologist portrait', 'Jean Piaget':'Jean Piaget psychologist portrait',
+  'Ulric Neisser':'Ulric Neisser psychologist portrait'
+};
+function initials(name){return name.split(/\s+/).filter(Boolean).slice(0,2).map(x=>x[0]).join('').toUpperCase()}
+function makePerson(name){
+ const item=document.createElement('div');item.className='person';item.dataset.personName=name.toLocaleLowerCase('es');
+ const fallback=document.createElement('div');fallback.className='portrait-fallback';fallback.textContent=initials(name);fallback.setAttribute('role','img');fallback.setAttribute('aria-label','Avatar de '+name);
+ const label=document.createElement('span');label.textContent=name;
+ item.append(fallback,label);
+ const query=peopleQueries[name]||name+' portrait';
+ const url='https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch='+encodeURIComponent('filetype:bitmap '+query)+'&gsrnamespace=6&gsrlimit=10&prop=imageinfo&iiprop=url&iiurlwidth=240&format=json&origin=*';
+ fetch(url,{mode:'cors'}).then(r=>{if(!r.ok)throw new Error('No se pudo consultar Wikimedia');return r.json()}).then(data=>{
+   const pages=Object.values(data.query?.pages||{});
+   const page=pages.find(p=>p.imageinfo?.[0]?.thumburl && /\.(jpe?g|png|webp)(\?|$)/i.test(p.imageinfo[0].thumburl)) || pages.find(p=>p.imageinfo?.[0]?.thumburl);
+   if(!page)return;
+   const img=document.createElement('img');img.src=page.imageinfo[0].thumburl;img.alt='Retrato de '+name;img.loading='lazy';img.referrerPolicy='no-referrer';
+   img.onerror=()=>{if(img.parentNode)item.replaceChild(fallback,img)};
+   img.onload=()=>{fallback.removeAttribute('aria-label')};
+   item.replaceChild(img,fallback);
+ }).catch(()=>{ /* El avatar con iniciales permanece visible como respaldo. */ });
+ return item;
+}
+document.querySelectorAll('.people[data-people]').forEach(group=>group.dataset.people.split('|').forEach(name=>group.appendChild(makePerson(name))));
+const searchBox=document.getElementById('searchBox');
+searchBox.addEventListener('input',()=>{
+ const q=searchBox.value.trim().toLocaleLowerCase('es');
+ document.querySelectorAll('.event').forEach(event=>{event.hidden=!!q&&!event.innerText.toLocaleLowerCase('es').includes(q);});
+});
+document.getElementById('expandAll').addEventListener('click',()=>document.querySelectorAll('.event:not([hidden]) details').forEach(d=>d.open=true));
+document.getElementById('collapseAll').addEventListener('click',()=>document.querySelectorAll('details').forEach(d=>d.open=false));
+document.getElementById('themeToggle').addEventListener('click',()=>{
+ document.body.classList.toggle('theme-dark');const dark=document.body.classList.contains('theme-dark');
+ document.getElementById('themeToggle').textContent=dark?'☀️ Modo claro':'🌙 Modo oscuro';
+});
+function updateProgress(){const max=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('progressBar').style.width=(max>0?(window.scrollY/max)*100:0)+'%'}
+window.addEventListener('scroll',updateProgress,{passive:true});window.addEventListener('resize',updateProgress);updateProgress();
+</script>
+
+</body>
+</html>
